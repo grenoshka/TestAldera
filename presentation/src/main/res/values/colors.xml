@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#606060</color>
+    <color name="secondary">#D1D1D1</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="text_primary">@color/black</color>
+    <color name="text_secondary">#606060</color>
+    <color name="divider">#E1E1E1</color>
+
+    <color name="progress_bar_color">@color/secondary</color>
+</resources>

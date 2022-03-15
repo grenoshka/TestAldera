@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".details.RecipeDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpImages"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/recipe_details_image_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_height="300dp" />
+
+        <View
+            android:id="@+id/ivVignette"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/vignette"
+            app:layout_constraintBottom_toBottomOf="@+id/vpImages"
+            app:layout_constraintEnd_toEndOf="@+id/vpImages"
+            app:layout_constraintStart_toStartOf="@+id/vpImages"
+            app:layout_constraintTop_toTopOf="@+id/vpImages" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/RecipeDetailsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/vpImages"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/vpImages"
+            tools:text="Very good recipe" />
+
+        <TextView
+            android:id="@+id/tvDifficultyLabel"
+            style="@style/RecipeDetailsTextView.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/recipe_details_difficulty_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vpImages" />
+
+        <TextView
+            android:id="@+id/tvDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDifficultyLabel"
+            app:layout_constraintStart_toEndOf="@+id/tvDifficultyLabel"
+            app:layout_constraintTop_toTopOf="@+id/tvDifficultyLabel"
+            tools:text="3/5" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            style="@style/RecipeDetailsTextView.Regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDifficultyLabel"
+            tools:text="Cook and eat" />
+
+        <TextView
+            android:id="@+id/tvInstructionLabel"
+            style="@style/RecipeDetailsTextView.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_details_instructions_label"
+            app:layout_constraintStart_toStartOf="@+id/vpImages"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+        <TextView
+            android:id="@+id/tvInstruction"
+            style="@style/RecipeDetailsTextView.Regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInstructionLabel"
+            tools:text="1. Cook\n2. Eat\n3. Enjoy" />
+
+        <TextView
+            android:id="@+id/tvSimilarLabel"
+            style="@style/RecipeDetailsTextView.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_details_similar_recipes_label"
+            app:layout_constraintStart_toStartOf="@+id/vpImages"
+            app:layout_constraintTop_toBottomOf="@+id/tvInstruction" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSimilar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSimilarLabel" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vpImages" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

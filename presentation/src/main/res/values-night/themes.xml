@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TestAldera" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="RecipeItemText">
+        <item name="android:layout_marginStart">@dimen/recipe_item_text_margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/recipe_item_text_margin_end</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="RecipeItemText.Name">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/recipe_item_name_text_size</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="RecipeItemText.Description">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">@dimen/recipe_item_description_text_size</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="RecipeListHeadline">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">@dimen/recipe_list_headline_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:text">@string/recipe_list_headline</item>
+    </style>
+
+    <style name="ProgressBar">
+        <item name="android:indeterminateTint">@color/progress_bar_color</item>
+    </style>
+</resources>

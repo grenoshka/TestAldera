@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TestAldera</string>
+    <string name="recipe_list_headline">Recipes</string>
+    <string name="recipe_details_difficulty">%1$d/5</string>
+    <string name="recipe_details_difficulty_label">Difficulty:</string>
+    <string name="recipe_details_instructions_label">Instructions:</string>
+    <string name="recipe_details_similar_recipes_label">Similar recipes</string>
+
+    <string name="error_network">Error: Failed to proceed with request</string>
+    <string name="error_incorrect_info">Error: Incorrect information</string>
+    <string name="error_not_found">Error: Not found</string>
+    <string name="error_access_denied">Error: Access denied</string>
+    <string name="error_service_unavailable">Error: Service unavailable</string>
+    <string name="error_unknown">Error: Unknown. Try again later</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivRecipe"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/recipe_item_image_margin_top"
+        android:layout_marginBottom="@dimen/recipe_item_image_margin_bottom"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/tvRecipeName"
+        style="@style/RecipeItemText.Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/recipe_item_text_margin_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivRecipe"
+        app:layout_constraintTop_toTopOf="@+id/ivRecipe"
+        tools:text="Very good recipe" />
+
+    <TextView
+        android:id="@+id/tvRecipeDescription"
+        style="@style/RecipeItemText.Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivRecipe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivRecipe"
+        app:layout_constraintTop_toBottomOf="@+id/tvRecipeName"
+        tools:text="Eat this food. Eat this food. Eat this food. Eat this food. Eat this food." />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="@dimen/recipe_item_text_margin_start"
+        android:layout_marginEnd="@dimen/recipe_item_text_margin_end"
+        android:background="@color/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivRecipe" />
+</androidx.constraintlayout.widget.ConstraintLayout>
